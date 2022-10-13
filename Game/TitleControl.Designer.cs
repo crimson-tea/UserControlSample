@@ -1,4 +1,4 @@
-﻿namespace AGame
+﻿namespace Game
 {
     partial class TitleControl
     {

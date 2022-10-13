@@ -1,7 +1,7 @@
 using System.Reflection.Metadata.Ecma335;
 using System.Security;
 
-namespace AGame
+namespace Game
 {
     public partial class Form1 : Form
     {

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AGame
+namespace Game
 {
     public partial class InputControl : UserControl
     {
@@ -43,7 +43,7 @@ namespace AGame
             _inputNumbers.Add(number);
         }
 
-        internal async Task<int[]> GetInputAsync(int count )
+        internal async Task<int[]> GetInputAsync(int count)
         {
             while (_inputNumbers.Count < count)
             {
