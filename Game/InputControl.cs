@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,7 @@ namespace AGame
                 b.Location = new Point(i % 3 * 70 + 50, i / 3 * 70 + 50);
                 b.Size = new Size(50, 50);
                 b.Click += numberButton_Click;
+                b.Tag = num;
 
                 Controls.Add(b);
             }
@@ -37,7 +39,7 @@ namespace AGame
         private void numberButton_Click(object? sender, EventArgs e)
         {
             Button button = sender as Button;
-            var number = int.Parse(button.Text);
+            var number = (int)button.Tag;
             _inputNumbers.Add(number);
         }
 
