@@ -26,7 +26,7 @@ namespace AGame
             var score = inputs.Zip(answer).Count(x => x.First == x.Second);
 
             resultLabel.Text = ox;
-            scoreLabel.Text = $"{score}/ {inputs.Length}";
+            scoreLabel.Text = $"{score} / {inputs.Length}";
         }
 
         private void exitButton_Click(object sender, EventArgs e)
