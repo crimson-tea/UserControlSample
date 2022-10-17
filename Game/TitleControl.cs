@@ -1,21 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Game
+﻿namespace Game
 {
     public partial class TitleControl : UserControl
     {
         public TitleControl(Action<object, EventArgs> callback)
         {
             InitializeComponent();
-            _callback = callback;   
+            _callback = callback;
         }
 
         Action<object, EventArgs> _callback;

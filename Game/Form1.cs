@@ -1,6 +1,3 @@
-using System.Reflection.Metadata.Ecma335;
-using System.Security;
-
 namespace Game
 {
     public partial class Form1 : Form
@@ -30,13 +27,13 @@ namespace Game
             var inputs = await input.GetInputAsync(numbers.Length);
             Controls.Remove(input);
 
-            Array.Reverse(numbers);
             ResultControl result = new ResultControl((ResultControl self) =>
             {
                 Controls.Remove(self);
                 self.Dispose();
                 Controls.Add(_titleControl);
             });
+            Array.Reverse(numbers);
             result.SetResult(inputs, numbers);
             Controls.Add(result);
         }

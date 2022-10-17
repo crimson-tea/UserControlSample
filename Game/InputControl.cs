@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Game
+﻿namespace Game
 {
     public partial class InputControl : UserControl
     {
@@ -22,17 +11,18 @@ namespace Game
             for (int i = 0; i < 9; i++)
             {
                 var num = i + 1;
-                Button b = new Button();
-                b.Text = num.ToString();
-                b.Location = new Point(i % 3 * 70 + 50, i / 3 * 70 + 50);
-                b.Size = new Size(50, 50);
+                Button b = new Button
+                {
+                    Text = num.ToString(),
+                    Location = new Point(i % 3 * 70 + 50, i / 3 * 70 + 50),
+                    Size = new Size(50, 50),
+                    Tag = num,
+                };
                 b.Click += numberButton_Click;
-                b.Tag = num;
 
                 Controls.Add(b);
             }
         }
-
 
         List<int> _inputNumbers = new List<int>();
 

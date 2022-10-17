@@ -31,6 +31,7 @@
             this.playButton = new System.Windows.Forms.Button();
             this.countNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.countNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,10 +71,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Count:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(65, 199);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(168, 39);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "表示された数字を後ろから順番に入力してください。";
+            // 
             // TitleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.countNumericUpDown);
             this.Controls.Add(this.label1);
@@ -90,5 +102,6 @@
         private Button playButton;
         private NumericUpDown countNumericUpDown;
         private Label label1;
+        private TextBox textBox1;
     }
 }

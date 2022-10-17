@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace Game
 {
@@ -22,10 +14,10 @@ namespace Game
 
         internal void SetResult(int[] inputs, int[] answer)
         {
-            var ox = inputs.Zip(answer).Select(x => x.First == x.Second ? "o" : "x").Aggregate("", (acc, x) => acc + x);
+            var result = inputs.Zip(answer).Select(x => x.First == x.Second ? "o" : "x").Aggregate("", (acc, x) => acc + x);
             var score = inputs.Zip(answer).Count(x => x.First == x.Second);
 
-            resultLabel.Text = ox;
+            resultLabel.Text = result;
             scoreLabel.Text = $"{score} / {inputs.Length}";
         }
 
